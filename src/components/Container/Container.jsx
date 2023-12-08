@@ -3,6 +3,7 @@ import ImageSlider from './ImageSlider/ImageSlider';
 import Box from '@mui/material/Box';
 import ListCard from './ListCard/ListCard';
 import { datas } from '../../data/data';
+import ChatbotComponent from '~/ChatBot/chatbot';
 function MainLayout() {
   return (
     <Box
@@ -24,6 +25,7 @@ function MainLayout() {
           <ListCard key={data.id} data={data}></ListCard>
         ))}
       </Box>
+      <ChatbotComponent></ChatbotComponent>
     </Box>
   );
 }

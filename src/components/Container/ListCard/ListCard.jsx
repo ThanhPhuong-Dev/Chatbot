@@ -10,21 +10,34 @@ import { FaRegCalendarAlt } from 'react-icons/fa';
 import Typography from '@mui/material/Typography';
 
 function ListCard({ data }) {
-  console.log(data);
-
   return (
     <Card
       sx={{
         maxWidth: 240,
         minWidth: 240,
-
+        cursor: 'pointer',
         borderRadius: '10px',
+        boxShadow: '1px 1px 10px #95a5a6',
         '& .MuiCardContent-root': {
           padding: '10px',
         },
       }}
     >
-      <CardMedia component="img" height="194" image={data.image} alt="Paella dish" />
+      <Box sx={{ overflow: 'hidden' }}>
+        <CardMedia
+          sx={{
+            transition: ' 0.5s',
+
+            '&:hover': {
+              transform: 'scale(2)',
+            },
+          }}
+          component="img"
+          height="194"
+          image={data.image}
+          alt="Paella dish"
+        />
+      </Box>
       <CardContent>
         <Typography sx={{ fontWeight: 600 }} variant="h8" color="text.primary">
           {data.title}
@@ -61,6 +74,7 @@ function ListCard({ data }) {
         <Button
           sx={{
             bgcolor: '#cca77f',
+            transition: '0.5s',
             '&:hover': {
               bgcolor: '#2c3e50',
             },

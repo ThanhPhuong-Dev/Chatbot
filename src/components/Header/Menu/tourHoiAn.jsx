@@ -18,7 +18,15 @@ function TourHoiAn() {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        transition: '0.5s',
+        border: 'none',
+        '&:hover': {
+          borderBottom: '2px solid #ccc',
+        },
+      }}
+    >
       <Button
         id="basic-button-TourHoiAn"
         aria-controls={open ? 'basic-menu-TourHoiAn' : undefined}
